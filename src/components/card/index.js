@@ -1,22 +1,24 @@
 import React from 'react'
 import './cardStyle.css'
 
-export default function Card({ id, type, width, height, flipped, handleClick }) {
+
+export default function Card({ id, imgType, width, height, flipped, handleClick, disabled, solved, }) {
   return (
     <div
       className={`container ${flipped ? 'flipped' : ''}`}
       style={{
         width, height
       }}
-      onClick={() => handleClick(id)}
+      onClick={() => disabled ? null : handleClick(id)}
     >
       <div className="flipper">
         <img
+          id={id}
           style={{
             height, width
           }}
           className={flipped ? 'front' : 'back'}
-          src={flipped ? `/img/${type}.svg` : '/img/bak.svg'}
+          src={flipped ? `/img/${imgType}.svg` : ((solved) ? '/img/output-onlinepngtools.png' : '/img/back.svg')}
           alt='card'
         />
       </div>
