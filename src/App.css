@@ -11,13 +11,15 @@ body {
 .mainDiv {
   border: 2px solid rgb(68, 70, 68);
   border-radius: 8px;
-  height: 430px;
-  width: 430px;
+  height: 440px;
+  width: 440px;
   margin: auto;
   margin-top: 200px;
   display: flex;
   flex-wrap: wrap;
-  padding: 5px;
+  padding-left: 10px;
+  padding-top: 5px;
+  
 }
 
 .checkSt {
